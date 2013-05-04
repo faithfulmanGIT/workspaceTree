@@ -1,0 +1,19 @@
+package hello;
+
+import javax.swing.JFrame;
+
+import test.TreeDragAndDrop;
+
+public class Main {
+
+
+    public static void main(String[] args) {  
+        JFrame f = new JFrame("123");  
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);  
+        //f.add(new TreeDragAndDrop().getContent());  
+        f.setSize(400,400);  
+        f.setLocation(200,200);  
+        f.setVisible(true);  
+    } 
+
+}

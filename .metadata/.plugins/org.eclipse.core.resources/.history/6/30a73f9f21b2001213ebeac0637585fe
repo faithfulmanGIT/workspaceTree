@@ -1,0 +1,61 @@
+package test;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import com.borland.jbcl.layout.*;
+
+
+public class Demo extends JFrame {
+  JPanel contentPane;
+  JScrollPane jScrollPane1 = new JScrollPane();
+  XYLayout xYLayout1 = new XYLayout();
+  DragSourceTree jTree1 = new DragSourceTree();
+  JScrollPane jScrollPane2 = new JScrollPane();
+  DragTargetTree jTree2 = new DragTargetTree();
+  JLabel jLabel1 = new JLabel();
+  JLabel jLabel2 = new JLabel();
+
+  //Construct the frame
+  public Demo () {
+    enableEvents(AWTEvent.WINDOW_EVENT_MASK);
+    try {
+      jbInit();
+    }
+    catch(Exception e) {
+      e.printStackTrace();
+    }
+  }
+
+  //Component initialization
+  private void jbInit() throws Exception  {
+    contentPane = (JPanel) this.getContentPane();
+    contentPane.setLayout(xYLayout1);
+    this.setSize(new Dimension(400, 300));
+    this.setTitle("Demo");
+    jLabel1.setFont(new java.awt.Font("DialogInput", 0, 16));
+    jLabel1.setText("source");
+    jLabel2.setEnabled(true);
+    jLabel2.setFont(new java.awt.Font("DialogInput", 0, 16));
+    jLabel2.setDebugGraphicsOptions(0);
+    jLabel2.setDoubleBuffered(false);
+    jLabel2.setVerifyInputWhenFocusTarget(true);
+    jLabel2.setDisplayedMnemonic('0');
+    jLabel2.setText("target");
+    jLabel2.setVerticalAlignment(javax.swing.SwingConstants.CENTER);
+    jLabel2.setVerticalTextPosition(javax.swing.SwingConstants.CENTER);
+    contentPane.add(jLabel1,  new XYConstraints(35, 8, 139, 27));
+    contentPane.add(jLabel2,    new XYConstraints(214, 10, 149, 20));
+    contentPane.add(jScrollPane2, new XYConstraints(211, 31, 159, 231));
+    contentPane.add(jScrollPane1, new XYConstraints(25, 31, 153, 230));
+    jScrollPane1.getViewport().add(jTree1, null);
+    jScrollPane2.getViewport().add(jTree2, null);
+  }
+
+  //Overridden so we can exit when window is closed
+  protected void processWindowEvent(WindowEvent e) {
+    super.processWindowEvent(e);
+    if (e.getID() == WindowEvent.WINDOW_CLOSING) {
+      System.exit(0);
+    }
+  }
+}
