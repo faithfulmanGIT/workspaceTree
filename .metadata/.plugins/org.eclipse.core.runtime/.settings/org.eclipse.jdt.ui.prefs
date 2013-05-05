@@ -19,7 +19,9 @@ org.eclipse.jdt.ui.text.code_templates_migrated=true
 org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.jdt.ui.text.templates_migrated=true
-org.eclipse.jface.textfont=1|Courier New|20.25|1|WINDOWS|1|-27|0|0|0|700|0|0|0|0|3|2|1|49|Courier New;
+org.eclipse.jdt.ui.visibility.order=B,V,R,D,
+org.eclipse.jface.textfont=1|Courier New|9.75|1|WINDOWS|1|-13|0|0|0|700|0|0|0|0|3|2|1|49|Courier New;
+outlinesortoption=T,SF,SI,SM,F,I,C,M,
 proposalOrderMigrated=true
 sourceHoverBackgroundColor=255,255,225
 sp_cleanup.add_default_serial_version_id=true

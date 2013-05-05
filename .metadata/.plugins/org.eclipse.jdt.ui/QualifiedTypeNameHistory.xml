@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.swing.DropMode"/>
 <fullyQualifiedTypeName name="javax.swing.JTree"/>
+<fullyQualifiedTypeName name="com.mongodb.Mongo"/>
 </qualifiedTypeNameHistroy>
